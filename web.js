@@ -1,9 +1,10 @@
+require('fs'),
 var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 //  response.send('Hello World 2!');
-    response.send(fs.readFileSync("index.html", 'utf-8'));
+    response.send(fs.readFileSync("index.html", 'utf8'));
 });
 
 
